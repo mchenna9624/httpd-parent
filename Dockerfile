@@ -32,7 +32,7 @@ ONBUILD COPY src/ ${DOCROOT}/
 EXPOSE 80
 
 # This stuff is needed to ensure a clean start
-RUN rm -rf /run/httpd && mkdir /run/httpd
+#RUN rm -rf /run/httpd && mkdir /run/httpd
 
 #Run as the root user
 USER root
