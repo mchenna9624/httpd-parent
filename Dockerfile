@@ -22,9 +22,9 @@ ENV 	DOCROOT=/var/www/html \
 # Need this for installing Apache from classroom yum repo
 # ADD training.repo /etc/yum.repos.d/training.repo
  
-RUN 	yum install -y --setopt=tsflags=nodocs --noplugins httpd && \
-    	yum clean all --noplugins -y && \
-	echo "Hello from the httpd-parent container!" > ${HOME}/index.html
+#RUN 	yum install -y --setopt=tsflags=nodocs --noplugins httpd && \
+#    	yum clean all --noplugins -y && \
+#	echo "Hello from the httpd-parent container!" > ${HOME}/index.html
 	
 # Allows child images to inject their own content into DocumentRoot
 ONBUILD COPY src/ ${DOCROOT}/
